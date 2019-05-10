@@ -8,7 +8,7 @@
   
   More information can be found inside addons.
   
-  Yes I was too lazy to create a new settings.lua.
+  Yes I was too lazy to create a new settings.lua for most of the addons.
   
   
   
