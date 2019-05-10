@@ -13,7 +13,7 @@
 ## How to set up?
 	1. From shared.lua, set up tests. There are examples, learn from them.
 	2. Spawn the Job NPC from Q panel.
-	3. Press ALT+E to open superadmin menu.
+	3. Press ALT+E to open superadmin menu while looking at the npc.
 	4. Set the desired name and model for the NPC.
 	5. From available jobs (that you have prepared tests for), add any of them to the list on the left using buttons.
 	6. It's ready for use!
