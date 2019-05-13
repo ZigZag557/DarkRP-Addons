@@ -1,5 +1,5 @@
 # Warning
-THIS ADDON IS NOT TESTED ENOUGH TO BE USED IN BIG SERVERS
+THIS ADDON IS NOT TESTED ENOUGH TO BE USED IN BIG SERVERS <br />
 Don't worry, tests are being done as you browse this addon.
 
 ## Description
