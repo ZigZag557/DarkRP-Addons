@@ -23,17 +23,18 @@ local settings =
 
 
 local function PlayerDeath(victim,n,killer)
-
-	local victimTeam = team.GetName(victim:Team())
-	local killerTeam = team.GetName(killer:Team())
-
-	if teamSettings[killerTeam] == nil then return end
-	if not table.HasValue(teamSettings[killerTeam], victimTeam) then return end
+	if killer ~= nil then
+		local victimTeam = team.GetName(victim:Team())
+		local killerTeam = team.GetName(killer:Team())
 	
-	local money = settings.moneyForKiller
-	killer:addMoney(money)
-	local msg = string.format(settings.killerMessage, money, killer:GetName())
-	DarkRP.notify(killer,0,3,msg)
+		if teamSettings[killerTeam] == nil then return end
+		if not table.HasValue(teamSettings[killerTeam], victimTeam) then return end
+	
+		local money = settings.moneyForKiller
+		killer:addMoney(money)
+		local msg = string.format(settings.killerMessage, money, killer:GetName())
+		DarkRP.notify(killer,0,3,msg)
+	end
 end
 
 
