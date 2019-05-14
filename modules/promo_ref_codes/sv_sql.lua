@@ -42,7 +42,9 @@ end
 local function RemoveExpiredPromocodes()
 	local codeTimes = sql.Query("SELECT * FROM SpecialPromoCodes")
 	local sysTime = os.time()
-
+	
+	if codeTimes == nil then return end
+	
 	for i=1,#codeTimes do
 		if sysTime >= tonumber(codeTimes[i].Expiration) then
 			sql.Query("DELETE FROM SpecialPromoCodes WHERE Code = '"..tostring(codeTimes[i].Code).."'")
