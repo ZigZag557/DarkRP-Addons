@@ -1,7 +1,3 @@
-# Warning
-THIS ADDON IS NOT TESTED ENOUGH TO BE USED IN BIG SERVERS <br />
-Don't worry, tests are being done as you browse this addon.
-
 ## Description
 With this addon, you can create promo codes which can be redeemed by your players to get various rewards and let your players call their friends and gain rewards via referral system. The promo codes can be used only once.
 
