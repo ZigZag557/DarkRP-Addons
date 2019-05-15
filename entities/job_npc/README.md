@@ -1,8 +1,6 @@
 # Warning
 * YOU NEED TO INSTALL job_npc MODULE WITH THIS ENTITY!
 
-* All of the features of this addon is tested but there might be some bugs/exploits. I am not responsible if your server gets errors but let me know any problems you encounter so I can fix it.
-
 ## Description
   With this addon, server owner can make some jobs only available to people who have passed the test for the job.
 
