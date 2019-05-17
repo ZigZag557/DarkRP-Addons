@@ -10,8 +10,6 @@ if not sql.TableExists("PlayerJobTests") then
 end
 
 
-sql.Query("DELETE FROM PlayerJobTests")
-
 function ply:JobTestsAddSQL(job)
 
 
