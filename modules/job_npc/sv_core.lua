@@ -48,7 +48,6 @@ end
 local function SQLControl()
 	local entries = sql.Query("SELECT Job FROM PlayerJobTests")
 	if entries == nil or entries == {} then return end
-	PrintTable(entries)
 
 
 	local jobs = {}
