@@ -267,4 +267,4 @@ DarkRP.defineChatCommand("activateref", ActivateRef)
 DarkRP.defineChatCommand("promomenu", ShowPromoMenu)
 DarkRP.defineChatCommand("specialpromo", SpecialPromoCodes)
 
-hook.Add("PlayerInitialSpawn","addtosqlonspawn", AddSQLOnSpawn)
+hook.Add("PlayerInitialSpawn","addtosqlonspawn_promoref", AddSQLOnSpawn)
