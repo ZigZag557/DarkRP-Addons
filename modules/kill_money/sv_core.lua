@@ -23,10 +23,11 @@ local settings =
 
 
 local function PlayerDeath(victim,n,killer)
-	if killer ~= nil then
+	if killer:IsPlayer() then
+		
 		local victimTeam = team.GetName(victim:Team())
 		local killerTeam = team.GetName(killer:Team())
-	
+
 		if teamSettings[killerTeam] == nil then return end
 		if not table.HasValue(teamSettings[killerTeam], victimTeam) then return end
 	
