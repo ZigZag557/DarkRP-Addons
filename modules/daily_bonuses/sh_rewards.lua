@@ -1,7 +1,8 @@
 DailyBonusesRewards = 
 {
 	money = 1000, -- Amount of money player will gain daily.
-	time = 30 -- Amount of time player will gain daily.
+	time = 30, -- Amount of time player will gain daily.
+	weapons = {"weapon_shotgun", "weapon_crossbow"}
 }
 
 DarkRP.declareChatCommand({

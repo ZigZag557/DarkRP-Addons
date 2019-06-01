@@ -9,7 +9,7 @@ local function AddToSQL(ply)
 	if v == nil then
 		local t = os.time() + 86400 -- 24h
 
-		local k = sql.Query("INSERT INTO DailyRewards VALUES('"..ply:SteamID().."', "..t..", "..t..", "..t..", "..t..")")
+		local k = sql.Query("INSERT INTO DailyRewards VALUES('"..ply:SteamID().."', "..t..", "..t..", "..t..", "..t..", "..t..", "..t..")")
 		print("[DailyRewards] A newcomer ".. ply:GetName().." has been added into the database.")
 	end
 
@@ -22,9 +22,9 @@ local function GetNextRewardTime(ply,arg)
 	if t == nil then ply:ChatPrint("Error on GetNextRewardTime() -- Contact an admin please!") return end
 
 	local timeLeft = (t - os.time())
-
 	if timeLeft <= 0 then
 		return -1
+
 	else
 		return timeLeft
 	end
@@ -35,24 +35,34 @@ end
 
 local function ApplyReward(ply, action)
 
-	if action == "NextDaily" then
+	if action == "NextMoney" then
 		ply:addMoney(DailyBonusesRewards.money)
+		DarkRP.notify(ply,0,3,"You have used your daily money bonus!")
 
-		local utime = ply:GetUTimeTotalTime()
-		ply:SetUTime(utime + (time * 60))
-		DarkRP.notify("You have used your daily money and time bonus!")
 	elseif action == "NextHp" then
 
 		ply:SetHealth(ply:GetMaxHealth())
-		DarkRP.notify("You have used your daily health bonus!")
+		DarkRP.notify(ply,0,3,"You have used your daily health bonus!")
+
 	elseif action == "NextArmor" then
 
 		ply:SetArmor(100)
-		DarkRP.notify("You have used your daily armor bonus!")
+		DarkRP.notify(ply,0,3,"You have used your daily armor bonus!")
+
 	elseif action == "NextUnjail" then
 
 		ply:unArrest()
-		DarkRP.notify("You have used your daily get out of jail bonus!")
+		DarkRP.notify(ply,0,3,"You have used your daily get out of jail bonus!")
+
+	elseif action == "NextWep" then
+		local w = table.Random(DailyBonusesRewards.weapons)
+		ply:Give(w)
+		DarkRP.notify(ply,0,3,"You have used your daily weapon bonus!")
+
+	elseif action == "NextTime" then
+		local utime = ply:GetUTimeTotalTime()
+		ply:SetUTime(utime + 1800)
+		DarkRP.notify(ply,0,3,"You have used your daily time bonus!")
 	end
 
 end
@@ -61,9 +71,11 @@ end
 
 local function TryGetReward(ply, arg)
 
-	if  arg ~= "NextDaily" and
+	if  arg ~= "NextTime" and
+		arg ~= "NextMoney" and
 		arg ~= "NextHp" and
 		arg ~= "NextArmor" and
+		arg ~= "NextWep" and
 		arg ~= "NextUnjail" then
 			ply:ChatPrint("Invalid arguments!")
 			return ""
@@ -83,9 +95,9 @@ local function TryGetReward(ply, arg)
 
 	if time == -1 then
 		local nxt = os.time() + 86400
-		local t = sql.Query("UPDATE DailyRewards SET NextReward = "..nxt.." WHERE Steam = '"..ply:SteamID().."'")
+		local t = sql.Query("UPDATE DailyRewards SET "..arg.." = "..nxt.." WHERE Steam = '"..ply:SteamID().."'")
 
-		if t == false then DarkRP.notify(ply,0,3,"Please contact an admin!") return "" end
+		if t == false then DarkRP.notify(ply,0,3,"Please contact an admin: Couldn't update database") return "" end
 		ApplyReward(ply, arg)
 		return ""
 	end
@@ -109,7 +121,7 @@ local function ShowMenu(ply)
 
 end
 
-hook.Add("PlayerInitialSpawn","addtosqlonspqn_dailybonus",AddToSQL)
+hook.Add("PlayerInitialSpawn","addtosqlonspawn_dailybonus",AddToSQL)
 
 DarkRP.defineChatCommand("dailybonus", TryGetReward)
 DarkRP.defineChatCommand("bonusmenu", ShowMenu )
