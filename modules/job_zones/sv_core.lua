@@ -11,6 +11,9 @@ local function IsPlayerInBox(ply,pos1,pos2)
 	return false
 end
 
+
+
+
 local function canPlayerChangeTeam(ply,job)
 	local t = JobZones
 	local team = team.GetName(job)
