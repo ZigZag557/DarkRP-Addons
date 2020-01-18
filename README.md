@@ -1,5 +1,5 @@
 # Description
-  These are the addons I have created for a server owner. Thankfully, he was nice enough to let me share these addons for free.
+  These are the addons I have created for a server owner. Thankfully, he was nice enough to let me share these addons to the public.
 
   
   * Feel free to use any of these addons without having to credit me as long as you don't credit someone else.
