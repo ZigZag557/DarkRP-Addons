@@ -5,8 +5,8 @@
 
 local teamSettings =
 {
-	["Citizen"] = {"Hobo","Medic"}, -- If citizen kills hobo or medic, he will earn money.
-	["Medic"] = {"Hobo", "Citizen"} -- If medic kills citizen or hobo, he will earn money.
+	["Citizen"] = {"Hobo","Medic"}, -- If citizen kills hobo or medic, citizen will earn money.
+	["Medic"] = {"Hobo", "Citizen"} -- If medic kills citizen or hobo, medic will earn money.
 
 }
 
