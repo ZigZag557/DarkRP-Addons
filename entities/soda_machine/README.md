@@ -6,5 +6,5 @@
 ## Description
   With this addon, you can create soda machines, place them and permaprop the soda machine and let your players buy soda from them while TEAM_REFILLER refills the soda machine.
 
-  * TEAM_REFILLER can refill any soda machine by just pressing e on them. They will earn money from that.
+  * TEAM_REFILLER can refill any soda machine by just pressing e on them. He will earn money from that.
   * Make your players use soda machines to fill thirst or hunger.
