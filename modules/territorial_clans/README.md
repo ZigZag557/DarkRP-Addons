@@ -1,4 +1,4 @@
-Territorial Clans
+## Territorial Clans
 
 Features:
 * Create or join a clan, You can write an application letter to a clan or create your own for a configureable price.
