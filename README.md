@@ -4,5 +4,8 @@
   
   More information can be found inside the addons.
   
+  # Higlights:
+  *https://github.com/ZigZag557/DarkRP-Addons/tree/master/modules/territorial_clans
+  
   
   
