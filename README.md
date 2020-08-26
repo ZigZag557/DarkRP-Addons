@@ -5,8 +5,8 @@
   More information can be found inside the addons.
   
   # Higlights:
-  1- https://github.com/ZigZag557/DarkRP-Addons/tree/master/modules/territorial_clans
-  2- https://github.com/ZigZag557/DarkRP-Addons/tree/master/modules/war_system
+  * https://github.com/ZigZag557/DarkRP-Addons/tree/master/modules/territorial_clans
+  * https://github.com/ZigZag557/DarkRP-Addons/tree/master/modules/war_system
   
   
   
