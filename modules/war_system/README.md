@@ -1,6 +1,6 @@
-## War System
+# War System
 
-# Features
+## Features
 * Fight for flags against other factions.
 * Each captured flag increases your XP and salary gain.
 * Capture an unique HQ flag to set your spawn point with each spawn point having their own doors can only be accessed by the faction owning the flag. (Only one per faction)
