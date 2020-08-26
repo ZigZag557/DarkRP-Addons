@@ -6,6 +6,7 @@
   
   # Higlights:
   1- https://github.com/ZigZag557/DarkRP-Addons/tree/master/modules/territorial_clans
+  2- https://github.com/ZigZag557/DarkRP-Addons/tree/master/modules/war_system
   
   
   
